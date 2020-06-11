@@ -4,12 +4,13 @@ var app = express();
 const PORT = 3000;
 
 
-//app.use(express.static(__dirname));
+app.set('view engine', 'ejs'); //sent views to EJS
 
 //this is how a rout is built in express
 app.get('/',(req, res)=>{
   //res.send(`App is running on port ${PORT}`);
-  res.json(data);
+  //res.json(data);
+  res.render('pages/index');
 });
 
 //app.listen(3000);
